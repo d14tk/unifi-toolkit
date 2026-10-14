@@ -1,0 +1,33 @@
+name: Home Assistant
+
+on:
+  push:
+    paths:
+      - "home-assistant/**"
+      - "custom_components/**"
+      - "repository.yaml"
+      - "hacs.json"
+  pull_request:
+
+jobs:
+  app:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: frenck/action-addon-linter@v2
+        with:
+          path: ./home-assistant/unifi_toolkit
+
+  hassfest:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: home-assistant/actions/hassfest@master
+
+  hacs:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: hacs/action@main
+        with:
+          category: integration
+          ignore: brands

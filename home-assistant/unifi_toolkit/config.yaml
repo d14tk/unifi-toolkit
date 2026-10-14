@@ -1,0 +1,19 @@
+name: UniFi Toolkit
+version: "1.13.2-2"
+slug: unifi_toolkit
+description: UniFi Dashboard, Wi-Fi Stalker, Threat Watch, Network Pulse und House Arrest (Crosstalk Solutions)
+url: https://github.com/d14tk/unifi-toolkit/tree/main/home-assistant/unifi_toolkit
+arch:
+  - amd64
+  - aarch64
+ingress: true
+panel_icon: mdi:access-point-network
+panel_title: UniFi Toolkit
+options:
+  language: de
+  log_level: info
+  stalker_refresh_interval: 60
+schema:
+  language: list(de|en)
+  log_level: list(debug|info|warning|error|critical)
+  stalker_refresh_interval: int(10,3600)

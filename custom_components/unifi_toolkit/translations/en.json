@@ -1,0 +1,18 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "UniFi Toolkit",
+        "description": "Installs the UniFi Toolkit app and adds it to the sidebar."
+      }
+    },
+    "progress": {
+      "install_app": "Installing and starting the UniFi Toolkit app. The first build takes a few minutes."
+    },
+    "abort": {
+      "not_hassio": "Requires Home Assistant OS or Supervised.",
+      "install_failed": "Installing the UniFi Toolkit app failed, see the log.",
+      "single_instance_allowed": "Already configured."
+    }
+  }
+}
